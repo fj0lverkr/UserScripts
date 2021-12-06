@@ -10,3 +10,6 @@
 - Outlook.com hide banner ad.user.js: 
   - blocks the banner ad on the right and below the folders.
   - Add words/phrases to the array `words` to make them randomly appear in stead of the word `Outlook`.
+- Jira Improvements.user.js:
+  - hides completed tasks in kanban on dashboards.
+  - makes certain links always open in a new tab in stead of the default current tab.

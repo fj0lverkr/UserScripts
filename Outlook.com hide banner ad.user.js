@@ -13,24 +13,32 @@
     introduced in GM/TM 1.0.   It restores the sandbox.
 */
 
-waitForKeyElements("._1fti_QgAzqGWPGlqh_FSvI, ._28ithXDZzMqSN0YAG2rCVn", hideElem)
-//waitForKeyElements ("._6EkCIBulssv0eDQ55G3yH", setSillySlogan)
-waitForKeyElements("._2tvCNqil81Lsi6owqrTDMq", setSillySlogan)
 
-function hideElem(node) {
-  node.hide()
+waitForKeyElements ("._1fti_QgAzqGWPGlqh_FSvI, ._28ithXDZzMqSN0YAG2rCVn, .pBKjVBVDRKIDHWS0A95I, .VPtFloqixpkkqJNcOv2T", hideElem)
+//waitForKeyElements ("._6EkCIBulssv0eDQ55G3yH", setSillySlogan)
+waitForKeyElements ("._2tvCNqil81Lsi6owqrTDMq", setSillySlogan)
+
+function hideElem(node){
+    node.hide()
 }
 
-function setSillySlogan(node) {
-  let words = ['At least it\'s not Gmail',
-    'kooltuO',
-    'ʞoolʇnO',
-    'Powered By Satan',
-    'Vooruitzicht',
-    'Premium included in next vaccine',
-    'Lorem ipsum...'
-  ]
-  let seed = Math.floor(Math.random() * words.length)
-  let word = words[seed]
-  node.html(word)
+function setSillySlogan(node, word='', wrd=[]){
+    if(word==''){
+        node.html('')
+        let words = ['At least it\'s not Gmail',
+                     'kooltuO',
+                     'ʞoolʇnO',
+                     'Powered By Satan',
+                     'Vooruitzicht',
+                     'Premium included in next vaccine',
+                     'Lorem ipsum...'
+                    ]
+        let seed = Math.floor(Math.random() * words.length)
+        word = words[seed]
+        wrd = word.split('')
+    }
+    if(wrd.length > 0){
+        node.text(node.text() + wrd.shift())
+        let running = setTimeout(function(){setSillySlogan(node,word,wrd)}, 90)
+    }
 }

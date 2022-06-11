@@ -14,7 +14,7 @@
 */
 
 
-waitForKeyElements ("._1fti_QgAzqGWPGlqh_FSvI, ._28ithXDZzMqSN0YAG2rCVn, .pBKjVBVDRKIDHWS0A95I, .VPtFloqixpkkqJNcOv2T", hideElem)
+waitForKeyElements (".O3eUZ, .u7EVN, .VPtFl, .pBKjV", hideElem)
 //waitForKeyElements ("._6EkCIBulssv0eDQ55G3yH", setSillySlogan)
 waitForKeyElements ("._2tvCNqil81Lsi6owqrTDMq", setSillySlogan)
 
